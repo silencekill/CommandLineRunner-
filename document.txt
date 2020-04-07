@@ -1,0 +1,15 @@
+创建类实现CommandLineRunner,实现run方法,将此类使用@Component注解注入到spring中
+
+@Component
+@Order(98)
+public class MyCommandLineRunner2 implements CommandLineRunner {
+    //在系统启动的时候会执行此方法
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("系统启动执行2");
+    }
+}
+
+args参数是启动项目时传入的值
+    1.在ide中启动在Edit configurations 中配置
+    2.打包后启动传值:  java  -jar ****.jar  参数1 参数2
